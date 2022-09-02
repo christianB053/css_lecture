@@ -1,0 +1,118 @@
+/* Reset (reset코드 길어지면 다른 파일로 빼기도 함*/
+h1,
+h2,
+p,
+ul {
+  margin: initial;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+h1,
+h2 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* Components */
+.wrapper {
+  width: 800px;
+  background-color: #ddd;
+  margin: 0 auto;
+}
+
+.header {
+  background-image: url(images/cover04.png);
+  background-size: cover;
+  text-align: center;
+  padding: 50px 0;
+  color: white;
+}
+
+.header img.profile {
+  border-radius: 200px / 100px;
+  width: 140px;
+  border: 5px solid white;
+}
+
+.header h1 {
+  font-size: 80px;
+  font-weight: bold;
+}
+
+.header p {
+  border-top: 5px solid;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+.section {
+  background-color: white;
+  margin: 20px;
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-position: right 30px center;
+}
+
+/* margin: 20px이면 section 사이 margin은 40px이 되어야 하지만
+마진 병합 현상으로 20px*/
+
+.information {
+  background-image: url(images/icon-information.png);
+}
+
+.skill {
+  background-image: url(images/icon-skills.png);
+}
+
+.section h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: palevioletred;
+}
+
+li {
+  color: #ddd;
+  padding-bottom: 5px;
+  border-left: 5px solid;
+  padding-left: 8px;
+}
+
+li:hover {
+  border-left: 5px solid;
+  color: #dec0d9;
+}
+
+.footer {
+  background-color: white;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.link {
+  color: #ddd;
+  border: 2px solid;
+  padding: 5px 18px;
+  border-radius: 30px;
+}
+.link.github {
+  color: violet;
+}
+
+.link.facebook {
+  color: aqua;
+}
+
+.link.contact {
+  color: blue;
+}
