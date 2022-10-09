@@ -1,0 +1,102 @@
+/* Reset */
+body,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Design */
+
+body {
+  background-color: #222;
+  color: #999;
+}
+
+.menu {
+  display: flex;
+  background-color: #222;
+  box-shadow: -0.2em -0.2em 10px #555, 0.2em 0.2em 10px #111;
+  border-radius: 50px;
+  color: #666;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  text-align: center;
+  line-height: 1;
+  padding: 0 0.8em;
+  font-family: Arial;
+  letter-spacing: 0.2em;
+  text-indent: 0.2em;
+}
+
+.menu-item {
+  position: relative;
+}
+
+.menu-item a {
+  padding: 0.4em;
+  display: block;
+  /* display block해야 상하단도 마진 줄 수 있음 */
+}
+
+.menu-item:hover {
+  color: lime;
+}
+
+.menu-sub {
+  background-color: black;
+  white-space: nowrap;
+  position: absolute;
+  opacity: 0;
+  left: 50%;
+  top: 20px;
+  transform: translate(-50%, 1.8em);
+  pointer-events: none;
+  transition: all 0.4s;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.menu-sub::before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: -20px;
+  right: 0;
+  height: 20px;
+}
+
+.menu-sub::after {
+  content: " ";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -20px;
+  width: 0;
+  height: 0;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.menu-sub a {
+  font-size: 16px;
+  color: #666;
+}
+
+.menu-item:hover .menu-sub {
+  opacity: 1;
+  pointer-events: auto;
+  /* pointer-events는 IE에서는 안 됨 */
+}
